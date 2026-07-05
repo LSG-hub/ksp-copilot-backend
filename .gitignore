@@ -10,3 +10,6 @@ build/
 *.zip
 export_*.zip
 datastore/base-template.json
+
+__pycache__/
+*.pyc
