@@ -1,0 +1,7 @@
+node_modules/
+.catalyst/
+*.log
+.env
+.DS_Store
+dist/
+build/
