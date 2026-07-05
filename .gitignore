@@ -1,5 +1,7 @@
 node_modules/
 .catalyst/
+.catalystrc
+.output/
 *.log
 .env
 .DS_Store

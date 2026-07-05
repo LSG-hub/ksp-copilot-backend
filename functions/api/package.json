@@ -1,0 +1,12 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "KSP Copilot backend API — Catalyst Advanced I/O function (NL->grounded-query agent over the FIR crime database).",
+  "main": "index.js",
+  "author": "LSG-hub",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.19.2",
+    "zcatalyst-sdk-node": "latest"
+  }
+}
