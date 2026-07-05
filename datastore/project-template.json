@@ -1,0 +1,2582 @@
+{
+  "name": "project-template",
+  "version": "1.0.0",
+  "parameters": {},
+  "components": {
+    "Circuits": [],
+    "Functions": [],
+    "WebClient": [],
+    "Cron": [],
+    "Datastore": [
+      {
+        "type": "table",
+        "name": "CaseMaster",
+        "properties": {
+          "table_name": "CaseMaster"
+        },
+        "dependsOn": []
+      },
+      {
+        "type": "column",
+        "name": "CaseMaster-CaseMasterID",
+        "properties": {
+          "column_name": "CaseMasterID",
+          "data_type": "bigint",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "CaseMaster",
+          "table_name": "CaseMaster"
+        },
+        "dependsOn": [
+          "Datastore.table.CaseMaster"
+        ]
+      },
+      {
+        "type": "column",
+        "name": "CaseMaster-CrimeNo",
+        "properties": {
+          "column_name": "CrimeNo",
+          "data_type": "varchar",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "CaseMaster",
+          "table_name": "CaseMaster",
+          "max_length": 255
+        },
+        "dependsOn": [
+          "Datastore.table.CaseMaster"
+        ]
+      },
+      {
+        "type": "column",
+        "name": "CaseMaster-CaseNo",
+        "properties": {
+          "column_name": "CaseNo",
+          "data_type": "varchar",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "CaseMaster",
+          "table_name": "CaseMaster",
+          "max_length": 255
+        },
+        "dependsOn": [
+          "Datastore.table.CaseMaster"
+        ]
+      },
+      {
+        "type": "column",
+        "name": "CaseMaster-CrimeRegisteredDate",
+        "properties": {
+          "column_name": "CrimeRegisteredDate",
+          "data_type": "date",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "CaseMaster",
+          "table_name": "CaseMaster"
+        },
+        "dependsOn": [
+          "Datastore.table.CaseMaster"
+        ]
+      },
+      {
+        "type": "column",
+        "name": "CaseMaster-PolicePersonID",
+        "properties": {
+          "column_name": "PolicePersonID",
+          "data_type": "bigint",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "CaseMaster",
+          "table_name": "CaseMaster"
+        },
+        "dependsOn": [
+          "Datastore.table.CaseMaster"
+        ]
+      },
+      {
+        "type": "column",
+        "name": "CaseMaster-PoliceStationID",
+        "properties": {
+          "column_name": "PoliceStationID",
+          "data_type": "bigint",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "CaseMaster",
+          "table_name": "CaseMaster"
+        },
+        "dependsOn": [
+          "Datastore.table.CaseMaster"
+        ]
+      },
+      {
+        "type": "column",
+        "name": "CaseMaster-CaseCategoryID",
+        "properties": {
+          "column_name": "CaseCategoryID",
+          "data_type": "int",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "CaseMaster",
+          "table_name": "CaseMaster"
+        },
+        "dependsOn": [
+          "Datastore.table.CaseMaster"
+        ]
+      },
+      {
+        "type": "column",
+        "name": "CaseMaster-GravityOffenceID",
+        "properties": {
+          "column_name": "GravityOffenceID",
+          "data_type": "int",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "CaseMaster",
+          "table_name": "CaseMaster"
+        },
+        "dependsOn": [
+          "Datastore.table.CaseMaster"
+        ]
+      },
+      {
+        "type": "column",
+        "name": "CaseMaster-CrimeMajorHeadID",
+        "properties": {
+          "column_name": "CrimeMajorHeadID",
+          "data_type": "int",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "CaseMaster",
+          "table_name": "CaseMaster"
+        },
+        "dependsOn": [
+          "Datastore.table.CaseMaster"
+        ]
+      },
+      {
+        "type": "column",
+        "name": "CaseMaster-CrimeMinorHeadID",
+        "properties": {
+          "column_name": "CrimeMinorHeadID",
+          "data_type": "int",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "CaseMaster",
+          "table_name": "CaseMaster"
+        },
+        "dependsOn": [
+          "Datastore.table.CaseMaster"
+        ]
+      },
+      {
+        "type": "column",
+        "name": "CaseMaster-CaseStatusID",
+        "properties": {
+          "column_name": "CaseStatusID",
+          "data_type": "int",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "CaseMaster",
+          "table_name": "CaseMaster"
+        },
+        "dependsOn": [
+          "Datastore.table.CaseMaster"
+        ]
+      },
+      {
+        "type": "column",
+        "name": "CaseMaster-CourtID",
+        "properties": {
+          "column_name": "CourtID",
+          "data_type": "bigint",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "CaseMaster",
+          "table_name": "CaseMaster"
+        },
+        "dependsOn": [
+          "Datastore.table.CaseMaster"
+        ]
+      },
+      {
+        "type": "column",
+        "name": "CaseMaster-IncidentFromDate",
+        "properties": {
+          "column_name": "IncidentFromDate",
+          "data_type": "datetime",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "CaseMaster",
+          "table_name": "CaseMaster"
+        },
+        "dependsOn": [
+          "Datastore.table.CaseMaster"
+        ]
+      },
+      {
+        "type": "column",
+        "name": "CaseMaster-IncidentToDate",
+        "properties": {
+          "column_name": "IncidentToDate",
+          "data_type": "datetime",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "CaseMaster",
+          "table_name": "CaseMaster"
+        },
+        "dependsOn": [
+          "Datastore.table.CaseMaster"
+        ]
+      },
+      {
+        "type": "column",
+        "name": "CaseMaster-InfoReceivedPSDate",
+        "properties": {
+          "column_name": "InfoReceivedPSDate",
+          "data_type": "datetime",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "CaseMaster",
+          "table_name": "CaseMaster"
+        },
+        "dependsOn": [
+          "Datastore.table.CaseMaster"
+        ]
+      },
+      {
+        "type": "column",
+        "name": "CaseMaster-latitude",
+        "properties": {
+          "column_name": "latitude",
+          "data_type": "double",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "CaseMaster",
+          "table_name": "CaseMaster",
+          "decimal_digits": 6
+        },
+        "dependsOn": [
+          "Datastore.table.CaseMaster"
+        ]
+      },
+      {
+        "type": "column",
+        "name": "CaseMaster-longitude",
+        "properties": {
+          "column_name": "longitude",
+          "data_type": "double",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "CaseMaster",
+          "table_name": "CaseMaster",
+          "decimal_digits": 6
+        },
+        "dependsOn": [
+          "Datastore.table.CaseMaster"
+        ]
+      },
+      {
+        "type": "column",
+        "name": "CaseMaster-BriefFacts",
+        "properties": {
+          "column_name": "BriefFacts",
+          "data_type": "text",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "CaseMaster",
+          "table_name": "CaseMaster",
+          "max_length": 10000
+        },
+        "dependsOn": [
+          "Datastore.table.CaseMaster"
+        ]
+      },
+      {
+        "type": "table",
+        "name": "ComplainantDetails",
+        "properties": {
+          "table_name": "ComplainantDetails"
+        },
+        "dependsOn": []
+      },
+      {
+        "type": "column",
+        "name": "ComplainantDetails-ComplainantID",
+        "properties": {
+          "column_name": "ComplainantID",
+          "data_type": "bigint",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "ComplainantDetails",
+          "table_name": "ComplainantDetails"
+        },
+        "dependsOn": [
+          "Datastore.table.ComplainantDetails"
+        ]
+      },
+      {
+        "type": "column",
+        "name": "ComplainantDetails-CaseMasterID",
+        "properties": {
+          "column_name": "CaseMasterID",
+          "data_type": "bigint",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "ComplainantDetails",
+          "table_name": "ComplainantDetails"
+        },
+        "dependsOn": [
+          "Datastore.table.ComplainantDetails"
+        ]
+      },
+      {
+        "type": "column",
+        "name": "ComplainantDetails-ComplainantName",
+        "properties": {
+          "column_name": "ComplainantName",
+          "data_type": "varchar",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "ComplainantDetails",
+          "table_name": "ComplainantDetails",
+          "max_length": 255
+        },
+        "dependsOn": [
+          "Datastore.table.ComplainantDetails"
+        ]
+      },
+      {
+        "type": "column",
+        "name": "ComplainantDetails-AgeYear",
+        "properties": {
+          "column_name": "AgeYear",
+          "data_type": "int",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "ComplainantDetails",
+          "table_name": "ComplainantDetails"
+        },
+        "dependsOn": [
+          "Datastore.table.ComplainantDetails"
+        ]
+      },
+      {
+        "type": "column",
+        "name": "ComplainantDetails-OccupationID",
+        "properties": {
+          "column_name": "OccupationID",
+          "data_type": "int",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "ComplainantDetails",
+          "table_name": "ComplainantDetails"
+        },
+        "dependsOn": [
+          "Datastore.table.ComplainantDetails"
+        ]
+      },
+      {
+        "type": "column",
+        "name": "ComplainantDetails-ReligionID",
+        "properties": {
+          "column_name": "ReligionID",
+          "data_type": "int",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "ComplainantDetails",
+          "table_name": "ComplainantDetails"
+        },
+        "dependsOn": [
+          "Datastore.table.ComplainantDetails"
+        ]
+      },
+      {
+        "type": "column",
+        "name": "ComplainantDetails-CasteID",
+        "properties": {
+          "column_name": "CasteID",
+          "data_type": "int",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "ComplainantDetails",
+          "table_name": "ComplainantDetails"
+        },
+        "dependsOn": [
+          "Datastore.table.ComplainantDetails"
+        ]
+      },
+      {
+        "type": "column",
+        "name": "ComplainantDetails-GenderID",
+        "properties": {
+          "column_name": "GenderID",
+          "data_type": "int",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "ComplainantDetails",
+          "table_name": "ComplainantDetails"
+        },
+        "dependsOn": [
+          "Datastore.table.ComplainantDetails"
+        ]
+      },
+      {
+        "type": "table",
+        "name": "ActSectionAssociation",
+        "properties": {
+          "table_name": "ActSectionAssociation"
+        },
+        "dependsOn": []
+      },
+      {
+        "type": "column",
+        "name": "ActSectionAssociation-CaseMasterID",
+        "properties": {
+          "column_name": "CaseMasterID",
+          "data_type": "bigint",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "ActSectionAssociation",
+          "table_name": "ActSectionAssociation"
+        },
+        "dependsOn": [
+          "Datastore.table.ActSectionAssociation"
+        ]
+      },
+      {
+        "type": "column",
+        "name": "ActSectionAssociation-ActID",
+        "properties": {
+          "column_name": "ActID",
+          "data_type": "varchar",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "ActSectionAssociation",
+          "table_name": "ActSectionAssociation",
+          "max_length": 255
+        },
+        "dependsOn": [
+          "Datastore.table.ActSectionAssociation"
+        ]
+      },
+      {
+        "type": "column",
+        "name": "ActSectionAssociation-SectionID",
+        "properties": {
+          "column_name": "SectionID",
+          "data_type": "varchar",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "ActSectionAssociation",
+          "table_name": "ActSectionAssociation",
+          "max_length": 255
+        },
+        "dependsOn": [
+          "Datastore.table.ActSectionAssociation"
+        ]
+      },
+      {
+        "type": "column",
+        "name": "ActSectionAssociation-ActOrderID",
+        "properties": {
+          "column_name": "ActOrderID",
+          "data_type": "int",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "ActSectionAssociation",
+          "table_name": "ActSectionAssociation"
+        },
+        "dependsOn": [
+          "Datastore.table.ActSectionAssociation"
+        ]
+      },
+      {
+        "type": "column",
+        "name": "ActSectionAssociation-SectionOrderID",
+        "properties": {
+          "column_name": "SectionOrderID",
+          "data_type": "int",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "ActSectionAssociation",
+          "table_name": "ActSectionAssociation"
+        },
+        "dependsOn": [
+          "Datastore.table.ActSectionAssociation"
+        ]
+      },
+      {
+        "type": "table",
+        "name": "Victim",
+        "properties": {
+          "table_name": "Victim"
+        },
+        "dependsOn": []
+      },
+      {
+        "type": "column",
+        "name": "Victim-VictimMasterID",
+        "properties": {
+          "column_name": "VictimMasterID",
+          "data_type": "bigint",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "Victim",
+          "table_name": "Victim"
+        },
+        "dependsOn": [
+          "Datastore.table.Victim"
+        ]
+      },
+      {
+        "type": "column",
+        "name": "Victim-CaseMasterID",
+        "properties": {
+          "column_name": "CaseMasterID",
+          "data_type": "bigint",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "Victim",
+          "table_name": "Victim"
+        },
+        "dependsOn": [
+          "Datastore.table.Victim"
+        ]
+      },
+      {
+        "type": "column",
+        "name": "Victim-VictimName",
+        "properties": {
+          "column_name": "VictimName",
+          "data_type": "varchar",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "Victim",
+          "table_name": "Victim",
+          "max_length": 255
+        },
+        "dependsOn": [
+          "Datastore.table.Victim"
+        ]
+      },
+      {
+        "type": "column",
+        "name": "Victim-AgeYear",
+        "properties": {
+          "column_name": "AgeYear",
+          "data_type": "int",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "Victim",
+          "table_name": "Victim"
+        },
+        "dependsOn": [
+          "Datastore.table.Victim"
+        ]
+      },
+      {
+        "type": "column",
+        "name": "Victim-GenderID",
+        "properties": {
+          "column_name": "GenderID",
+          "data_type": "int",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "Victim",
+          "table_name": "Victim"
+        },
+        "dependsOn": [
+          "Datastore.table.Victim"
+        ]
+      },
+      {
+        "type": "column",
+        "name": "Victim-VictimPolice",
+        "properties": {
+          "column_name": "VictimPolice",
+          "data_type": "boolean",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "Victim",
+          "table_name": "Victim"
+        },
+        "dependsOn": [
+          "Datastore.table.Victim"
+        ]
+      },
+      {
+        "type": "table",
+        "name": "Accused",
+        "properties": {
+          "table_name": "Accused"
+        },
+        "dependsOn": []
+      },
+      {
+        "type": "column",
+        "name": "Accused-AccusedMasterID",
+        "properties": {
+          "column_name": "AccusedMasterID",
+          "data_type": "bigint",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "Accused",
+          "table_name": "Accused"
+        },
+        "dependsOn": [
+          "Datastore.table.Accused"
+        ]
+      },
+      {
+        "type": "column",
+        "name": "Accused-CaseMasterID",
+        "properties": {
+          "column_name": "CaseMasterID",
+          "data_type": "bigint",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "Accused",
+          "table_name": "Accused"
+        },
+        "dependsOn": [
+          "Datastore.table.Accused"
+        ]
+      },
+      {
+        "type": "column",
+        "name": "Accused-AccusedName",
+        "properties": {
+          "column_name": "AccusedName",
+          "data_type": "varchar",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "Accused",
+          "table_name": "Accused",
+          "max_length": 255
+        },
+        "dependsOn": [
+          "Datastore.table.Accused"
+        ]
+      },
+      {
+        "type": "column",
+        "name": "Accused-AgeYear",
+        "properties": {
+          "column_name": "AgeYear",
+          "data_type": "int",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "Accused",
+          "table_name": "Accused"
+        },
+        "dependsOn": [
+          "Datastore.table.Accused"
+        ]
+      },
+      {
+        "type": "column",
+        "name": "Accused-GenderID",
+        "properties": {
+          "column_name": "GenderID",
+          "data_type": "int",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "Accused",
+          "table_name": "Accused"
+        },
+        "dependsOn": [
+          "Datastore.table.Accused"
+        ]
+      },
+      {
+        "type": "column",
+        "name": "Accused-PersonID",
+        "properties": {
+          "column_name": "PersonID",
+          "data_type": "varchar",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "Accused",
+          "table_name": "Accused",
+          "max_length": 255
+        },
+        "dependsOn": [
+          "Datastore.table.Accused"
+        ]
+      },
+      {
+        "type": "table",
+        "name": "ArrestSurrender",
+        "properties": {
+          "table_name": "ArrestSurrender"
+        },
+        "dependsOn": []
+      },
+      {
+        "type": "column",
+        "name": "ArrestSurrender-ArrestSurrenderID",
+        "properties": {
+          "column_name": "ArrestSurrenderID",
+          "data_type": "bigint",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "ArrestSurrender",
+          "table_name": "ArrestSurrender"
+        },
+        "dependsOn": [
+          "Datastore.table.ArrestSurrender"
+        ]
+      },
+      {
+        "type": "column",
+        "name": "ArrestSurrender-CaseMasterID",
+        "properties": {
+          "column_name": "CaseMasterID",
+          "data_type": "bigint",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "ArrestSurrender",
+          "table_name": "ArrestSurrender"
+        },
+        "dependsOn": [
+          "Datastore.table.ArrestSurrender"
+        ]
+      },
+      {
+        "type": "column",
+        "name": "ArrestSurrender-ArrestSurrenderTypeID",
+        "properties": {
+          "column_name": "ArrestSurrenderTypeID",
+          "data_type": "int",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "ArrestSurrender",
+          "table_name": "ArrestSurrender"
+        },
+        "dependsOn": [
+          "Datastore.table.ArrestSurrender"
+        ]
+      },
+      {
+        "type": "column",
+        "name": "ArrestSurrender-ArrestSurrenderDate",
+        "properties": {
+          "column_name": "ArrestSurrenderDate",
+          "data_type": "date",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "ArrestSurrender",
+          "table_name": "ArrestSurrender"
+        },
+        "dependsOn": [
+          "Datastore.table.ArrestSurrender"
+        ]
+      },
+      {
+        "type": "column",
+        "name": "ArrestSurrender-ArrestSurrenderStateId",
+        "properties": {
+          "column_name": "ArrestSurrenderStateId",
+          "data_type": "int",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "ArrestSurrender",
+          "table_name": "ArrestSurrender"
+        },
+        "dependsOn": [
+          "Datastore.table.ArrestSurrender"
+        ]
+      },
+      {
+        "type": "column",
+        "name": "ArrestSurrender-ArrestSurrenderDistrictId",
+        "properties": {
+          "column_name": "ArrestSurrenderDistrictId",
+          "data_type": "int",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "ArrestSurrender",
+          "table_name": "ArrestSurrender"
+        },
+        "dependsOn": [
+          "Datastore.table.ArrestSurrender"
+        ]
+      },
+      {
+        "type": "column",
+        "name": "ArrestSurrender-PoliceStationID",
+        "properties": {
+          "column_name": "PoliceStationID",
+          "data_type": "bigint",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "ArrestSurrender",
+          "table_name": "ArrestSurrender"
+        },
+        "dependsOn": [
+          "Datastore.table.ArrestSurrender"
+        ]
+      },
+      {
+        "type": "column",
+        "name": "ArrestSurrender-IOID",
+        "properties": {
+          "column_name": "IOID",
+          "data_type": "bigint",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "ArrestSurrender",
+          "table_name": "ArrestSurrender"
+        },
+        "dependsOn": [
+          "Datastore.table.ArrestSurrender"
+        ]
+      },
+      {
+        "type": "column",
+        "name": "ArrestSurrender-CourtID",
+        "properties": {
+          "column_name": "CourtID",
+          "data_type": "bigint",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "ArrestSurrender",
+          "table_name": "ArrestSurrender"
+        },
+        "dependsOn": [
+          "Datastore.table.ArrestSurrender"
+        ]
+      },
+      {
+        "type": "column",
+        "name": "ArrestSurrender-AccusedMasterID",
+        "properties": {
+          "column_name": "AccusedMasterID",
+          "data_type": "bigint",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "ArrestSurrender",
+          "table_name": "ArrestSurrender"
+        },
+        "dependsOn": [
+          "Datastore.table.ArrestSurrender"
+        ]
+      },
+      {
+        "type": "column",
+        "name": "ArrestSurrender-IsAccused",
+        "properties": {
+          "column_name": "IsAccused",
+          "data_type": "boolean",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "ArrestSurrender",
+          "table_name": "ArrestSurrender"
+        },
+        "dependsOn": [
+          "Datastore.table.ArrestSurrender"
+        ]
+      },
+      {
+        "type": "column",
+        "name": "ArrestSurrender-IsComplainantAccused",
+        "properties": {
+          "column_name": "IsComplainantAccused",
+          "data_type": "boolean",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "ArrestSurrender",
+          "table_name": "ArrestSurrender"
+        },
+        "dependsOn": [
+          "Datastore.table.ArrestSurrender"
+        ]
+      },
+      {
+        "type": "table",
+        "name": "Act",
+        "properties": {
+          "table_name": "Act"
+        },
+        "dependsOn": []
+      },
+      {
+        "type": "column",
+        "name": "Act-ActCode",
+        "properties": {
+          "column_name": "ActCode",
+          "data_type": "varchar",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "Act",
+          "table_name": "Act",
+          "max_length": 255
+        },
+        "dependsOn": [
+          "Datastore.table.Act"
+        ]
+      },
+      {
+        "type": "column",
+        "name": "Act-ActDescription",
+        "properties": {
+          "column_name": "ActDescription",
+          "data_type": "varchar",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "Act",
+          "table_name": "Act",
+          "max_length": 255
+        },
+        "dependsOn": [
+          "Datastore.table.Act"
+        ]
+      },
+      {
+        "type": "column",
+        "name": "Act-ShortName",
+        "properties": {
+          "column_name": "ShortName",
+          "data_type": "varchar",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "Act",
+          "table_name": "Act",
+          "max_length": 255
+        },
+        "dependsOn": [
+          "Datastore.table.Act"
+        ]
+      },
+      {
+        "type": "column",
+        "name": "Act-Active",
+        "properties": {
+          "column_name": "Active",
+          "data_type": "boolean",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "Act",
+          "table_name": "Act"
+        },
+        "dependsOn": [
+          "Datastore.table.Act"
+        ]
+      },
+      {
+        "type": "table",
+        "name": "Section",
+        "properties": {
+          "table_name": "Section"
+        },
+        "dependsOn": []
+      },
+      {
+        "type": "column",
+        "name": "Section-ActCode",
+        "properties": {
+          "column_name": "ActCode",
+          "data_type": "varchar",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "Section",
+          "table_name": "Section",
+          "max_length": 255
+        },
+        "dependsOn": [
+          "Datastore.table.Section"
+        ]
+      },
+      {
+        "type": "column",
+        "name": "Section-SectionCode",
+        "properties": {
+          "column_name": "SectionCode",
+          "data_type": "varchar",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "Section",
+          "table_name": "Section",
+          "max_length": 255
+        },
+        "dependsOn": [
+          "Datastore.table.Section"
+        ]
+      },
+      {
+        "type": "column",
+        "name": "Section-SectionDescription",
+        "properties": {
+          "column_name": "SectionDescription",
+          "data_type": "varchar",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "Section",
+          "table_name": "Section",
+          "max_length": 255
+        },
+        "dependsOn": [
+          "Datastore.table.Section"
+        ]
+      },
+      {
+        "type": "column",
+        "name": "Section-Active",
+        "properties": {
+          "column_name": "Active",
+          "data_type": "boolean",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "Section",
+          "table_name": "Section"
+        },
+        "dependsOn": [
+          "Datastore.table.Section"
+        ]
+      },
+      {
+        "type": "table",
+        "name": "CrimeHeadActSection",
+        "properties": {
+          "table_name": "CrimeHeadActSection"
+        },
+        "dependsOn": []
+      },
+      {
+        "type": "column",
+        "name": "CrimeHeadActSection-CrimeHeadID",
+        "properties": {
+          "column_name": "CrimeHeadID",
+          "data_type": "int",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "CrimeHeadActSection",
+          "table_name": "CrimeHeadActSection"
+        },
+        "dependsOn": [
+          "Datastore.table.CrimeHeadActSection"
+        ]
+      },
+      {
+        "type": "column",
+        "name": "CrimeHeadActSection-ActCode",
+        "properties": {
+          "column_name": "ActCode",
+          "data_type": "varchar",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "CrimeHeadActSection",
+          "table_name": "CrimeHeadActSection",
+          "max_length": 255
+        },
+        "dependsOn": [
+          "Datastore.table.CrimeHeadActSection"
+        ]
+      },
+      {
+        "type": "column",
+        "name": "CrimeHeadActSection-SectionCode",
+        "properties": {
+          "column_name": "SectionCode",
+          "data_type": "varchar",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "CrimeHeadActSection",
+          "table_name": "CrimeHeadActSection",
+          "max_length": 255
+        },
+        "dependsOn": [
+          "Datastore.table.CrimeHeadActSection"
+        ]
+      },
+      {
+        "type": "table",
+        "name": "CrimeHead",
+        "properties": {
+          "table_name": "CrimeHead"
+        },
+        "dependsOn": []
+      },
+      {
+        "type": "column",
+        "name": "CrimeHead-CrimeHeadID",
+        "properties": {
+          "column_name": "CrimeHeadID",
+          "data_type": "int",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "CrimeHead",
+          "table_name": "CrimeHead"
+        },
+        "dependsOn": [
+          "Datastore.table.CrimeHead"
+        ]
+      },
+      {
+        "type": "column",
+        "name": "CrimeHead-CrimeGroupName",
+        "properties": {
+          "column_name": "CrimeGroupName",
+          "data_type": "varchar",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "CrimeHead",
+          "table_name": "CrimeHead",
+          "max_length": 255
+        },
+        "dependsOn": [
+          "Datastore.table.CrimeHead"
+        ]
+      },
+      {
+        "type": "column",
+        "name": "CrimeHead-Active",
+        "properties": {
+          "column_name": "Active",
+          "data_type": "boolean",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "CrimeHead",
+          "table_name": "CrimeHead"
+        },
+        "dependsOn": [
+          "Datastore.table.CrimeHead"
+        ]
+      },
+      {
+        "type": "table",
+        "name": "CrimeSubHead",
+        "properties": {
+          "table_name": "CrimeSubHead"
+        },
+        "dependsOn": []
+      },
+      {
+        "type": "column",
+        "name": "CrimeSubHead-CrimeSubHeadID",
+        "properties": {
+          "column_name": "CrimeSubHeadID",
+          "data_type": "int",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "CrimeSubHead",
+          "table_name": "CrimeSubHead"
+        },
+        "dependsOn": [
+          "Datastore.table.CrimeSubHead"
+        ]
+      },
+      {
+        "type": "column",
+        "name": "CrimeSubHead-CrimeHeadID",
+        "properties": {
+          "column_name": "CrimeHeadID",
+          "data_type": "int",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "CrimeSubHead",
+          "table_name": "CrimeSubHead"
+        },
+        "dependsOn": [
+          "Datastore.table.CrimeSubHead"
+        ]
+      },
+      {
+        "type": "column",
+        "name": "CrimeSubHead-CrimeHeadName",
+        "properties": {
+          "column_name": "CrimeHeadName",
+          "data_type": "varchar",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "CrimeSubHead",
+          "table_name": "CrimeSubHead",
+          "max_length": 255
+        },
+        "dependsOn": [
+          "Datastore.table.CrimeSubHead"
+        ]
+      },
+      {
+        "type": "column",
+        "name": "CrimeSubHead-SeqID",
+        "properties": {
+          "column_name": "SeqID",
+          "data_type": "int",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "CrimeSubHead",
+          "table_name": "CrimeSubHead"
+        },
+        "dependsOn": [
+          "Datastore.table.CrimeSubHead"
+        ]
+      },
+      {
+        "type": "table",
+        "name": "CasteMaster",
+        "properties": {
+          "table_name": "CasteMaster"
+        },
+        "dependsOn": []
+      },
+      {
+        "type": "column",
+        "name": "CasteMaster-caste_master_id",
+        "properties": {
+          "column_name": "caste_master_id",
+          "data_type": "int",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "CasteMaster",
+          "table_name": "CasteMaster"
+        },
+        "dependsOn": [
+          "Datastore.table.CasteMaster"
+        ]
+      },
+      {
+        "type": "column",
+        "name": "CasteMaster-caste_master_name",
+        "properties": {
+          "column_name": "caste_master_name",
+          "data_type": "varchar",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "CasteMaster",
+          "table_name": "CasteMaster",
+          "max_length": 255
+        },
+        "dependsOn": [
+          "Datastore.table.CasteMaster"
+        ]
+      },
+      {
+        "type": "table",
+        "name": "ReligionMaster",
+        "properties": {
+          "table_name": "ReligionMaster"
+        },
+        "dependsOn": []
+      },
+      {
+        "type": "column",
+        "name": "ReligionMaster-ReligionID",
+        "properties": {
+          "column_name": "ReligionID",
+          "data_type": "int",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "ReligionMaster",
+          "table_name": "ReligionMaster"
+        },
+        "dependsOn": [
+          "Datastore.table.ReligionMaster"
+        ]
+      },
+      {
+        "type": "column",
+        "name": "ReligionMaster-ReligionName",
+        "properties": {
+          "column_name": "ReligionName",
+          "data_type": "varchar",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "ReligionMaster",
+          "table_name": "ReligionMaster",
+          "max_length": 255
+        },
+        "dependsOn": [
+          "Datastore.table.ReligionMaster"
+        ]
+      },
+      {
+        "type": "table",
+        "name": "OccupationMaster",
+        "properties": {
+          "table_name": "OccupationMaster"
+        },
+        "dependsOn": []
+      },
+      {
+        "type": "column",
+        "name": "OccupationMaster-OccupationID",
+        "properties": {
+          "column_name": "OccupationID",
+          "data_type": "int",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "OccupationMaster",
+          "table_name": "OccupationMaster"
+        },
+        "dependsOn": [
+          "Datastore.table.OccupationMaster"
+        ]
+      },
+      {
+        "type": "column",
+        "name": "OccupationMaster-OccupationName",
+        "properties": {
+          "column_name": "OccupationName",
+          "data_type": "varchar",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "OccupationMaster",
+          "table_name": "OccupationMaster",
+          "max_length": 255
+        },
+        "dependsOn": [
+          "Datastore.table.OccupationMaster"
+        ]
+      },
+      {
+        "type": "table",
+        "name": "CaseStatusMaster",
+        "properties": {
+          "table_name": "CaseStatusMaster"
+        },
+        "dependsOn": []
+      },
+      {
+        "type": "column",
+        "name": "CaseStatusMaster-CaseStatusID",
+        "properties": {
+          "column_name": "CaseStatusID",
+          "data_type": "int",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "CaseStatusMaster",
+          "table_name": "CaseStatusMaster"
+        },
+        "dependsOn": [
+          "Datastore.table.CaseStatusMaster"
+        ]
+      },
+      {
+        "type": "column",
+        "name": "CaseStatusMaster-CaseStatusName",
+        "properties": {
+          "column_name": "CaseStatusName",
+          "data_type": "varchar",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "CaseStatusMaster",
+          "table_name": "CaseStatusMaster",
+          "max_length": 255
+        },
+        "dependsOn": [
+          "Datastore.table.CaseStatusMaster"
+        ]
+      },
+      {
+        "type": "table",
+        "name": "Court",
+        "properties": {
+          "table_name": "Court"
+        },
+        "dependsOn": []
+      },
+      {
+        "type": "column",
+        "name": "Court-CourtID",
+        "properties": {
+          "column_name": "CourtID",
+          "data_type": "bigint",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "Court",
+          "table_name": "Court"
+        },
+        "dependsOn": [
+          "Datastore.table.Court"
+        ]
+      },
+      {
+        "type": "column",
+        "name": "Court-CourtName",
+        "properties": {
+          "column_name": "CourtName",
+          "data_type": "varchar",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "Court",
+          "table_name": "Court",
+          "max_length": 255
+        },
+        "dependsOn": [
+          "Datastore.table.Court"
+        ]
+      },
+      {
+        "type": "column",
+        "name": "Court-DistrictID",
+        "properties": {
+          "column_name": "DistrictID",
+          "data_type": "int",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "Court",
+          "table_name": "Court"
+        },
+        "dependsOn": [
+          "Datastore.table.Court"
+        ]
+      },
+      {
+        "type": "column",
+        "name": "Court-StateID",
+        "properties": {
+          "column_name": "StateID",
+          "data_type": "int",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "Court",
+          "table_name": "Court"
+        },
+        "dependsOn": [
+          "Datastore.table.Court"
+        ]
+      },
+      {
+        "type": "column",
+        "name": "Court-Active",
+        "properties": {
+          "column_name": "Active",
+          "data_type": "boolean",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "Court",
+          "table_name": "Court"
+        },
+        "dependsOn": [
+          "Datastore.table.Court"
+        ]
+      },
+      {
+        "type": "table",
+        "name": "District",
+        "properties": {
+          "table_name": "District"
+        },
+        "dependsOn": []
+      },
+      {
+        "type": "column",
+        "name": "District-DistrictID",
+        "properties": {
+          "column_name": "DistrictID",
+          "data_type": "int",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "District",
+          "table_name": "District"
+        },
+        "dependsOn": [
+          "Datastore.table.District"
+        ]
+      },
+      {
+        "type": "column",
+        "name": "District-DistrictName",
+        "properties": {
+          "column_name": "DistrictName",
+          "data_type": "varchar",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "District",
+          "table_name": "District",
+          "max_length": 255
+        },
+        "dependsOn": [
+          "Datastore.table.District"
+        ]
+      },
+      {
+        "type": "column",
+        "name": "District-StateID",
+        "properties": {
+          "column_name": "StateID",
+          "data_type": "int",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "District",
+          "table_name": "District"
+        },
+        "dependsOn": [
+          "Datastore.table.District"
+        ]
+      },
+      {
+        "type": "column",
+        "name": "District-Active",
+        "properties": {
+          "column_name": "Active",
+          "data_type": "boolean",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "District",
+          "table_name": "District"
+        },
+        "dependsOn": [
+          "Datastore.table.District"
+        ]
+      },
+      {
+        "type": "table",
+        "name": "State",
+        "properties": {
+          "table_name": "State"
+        },
+        "dependsOn": []
+      },
+      {
+        "type": "column",
+        "name": "State-StateID",
+        "properties": {
+          "column_name": "StateID",
+          "data_type": "int",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "State",
+          "table_name": "State"
+        },
+        "dependsOn": [
+          "Datastore.table.State"
+        ]
+      },
+      {
+        "type": "column",
+        "name": "State-StateName",
+        "properties": {
+          "column_name": "StateName",
+          "data_type": "varchar",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "State",
+          "table_name": "State",
+          "max_length": 255
+        },
+        "dependsOn": [
+          "Datastore.table.State"
+        ]
+      },
+      {
+        "type": "column",
+        "name": "State-NationalityID",
+        "properties": {
+          "column_name": "NationalityID",
+          "data_type": "int",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "State",
+          "table_name": "State"
+        },
+        "dependsOn": [
+          "Datastore.table.State"
+        ]
+      },
+      {
+        "type": "column",
+        "name": "State-Active",
+        "properties": {
+          "column_name": "Active",
+          "data_type": "boolean",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "State",
+          "table_name": "State"
+        },
+        "dependsOn": [
+          "Datastore.table.State"
+        ]
+      },
+      {
+        "type": "table",
+        "name": "Unit",
+        "properties": {
+          "table_name": "Unit"
+        },
+        "dependsOn": []
+      },
+      {
+        "type": "column",
+        "name": "Unit-UnitID",
+        "properties": {
+          "column_name": "UnitID",
+          "data_type": "bigint",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "Unit",
+          "table_name": "Unit"
+        },
+        "dependsOn": [
+          "Datastore.table.Unit"
+        ]
+      },
+      {
+        "type": "column",
+        "name": "Unit-UnitName",
+        "properties": {
+          "column_name": "UnitName",
+          "data_type": "varchar",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "Unit",
+          "table_name": "Unit",
+          "max_length": 255
+        },
+        "dependsOn": [
+          "Datastore.table.Unit"
+        ]
+      },
+      {
+        "type": "column",
+        "name": "Unit-TypeID",
+        "properties": {
+          "column_name": "TypeID",
+          "data_type": "int",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "Unit",
+          "table_name": "Unit"
+        },
+        "dependsOn": [
+          "Datastore.table.Unit"
+        ]
+      },
+      {
+        "type": "column",
+        "name": "Unit-ParentUnit",
+        "properties": {
+          "column_name": "ParentUnit",
+          "data_type": "bigint",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "Unit",
+          "table_name": "Unit"
+        },
+        "dependsOn": [
+          "Datastore.table.Unit"
+        ]
+      },
+      {
+        "type": "column",
+        "name": "Unit-NationalityID",
+        "properties": {
+          "column_name": "NationalityID",
+          "data_type": "int",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "Unit",
+          "table_name": "Unit"
+        },
+        "dependsOn": [
+          "Datastore.table.Unit"
+        ]
+      },
+      {
+        "type": "column",
+        "name": "Unit-StateID",
+        "properties": {
+          "column_name": "StateID",
+          "data_type": "int",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "Unit",
+          "table_name": "Unit"
+        },
+        "dependsOn": [
+          "Datastore.table.Unit"
+        ]
+      },
+      {
+        "type": "column",
+        "name": "Unit-DistrictID",
+        "properties": {
+          "column_name": "DistrictID",
+          "data_type": "int",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "Unit",
+          "table_name": "Unit"
+        },
+        "dependsOn": [
+          "Datastore.table.Unit"
+        ]
+      },
+      {
+        "type": "column",
+        "name": "Unit-Active",
+        "properties": {
+          "column_name": "Active",
+          "data_type": "boolean",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "Unit",
+          "table_name": "Unit"
+        },
+        "dependsOn": [
+          "Datastore.table.Unit"
+        ]
+      },
+      {
+        "type": "table",
+        "name": "UnitType",
+        "properties": {
+          "table_name": "UnitType"
+        },
+        "dependsOn": []
+      },
+      {
+        "type": "column",
+        "name": "UnitType-UnitTypeID",
+        "properties": {
+          "column_name": "UnitTypeID",
+          "data_type": "int",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "UnitType",
+          "table_name": "UnitType"
+        },
+        "dependsOn": [
+          "Datastore.table.UnitType"
+        ]
+      },
+      {
+        "type": "column",
+        "name": "UnitType-UnitTypeName",
+        "properties": {
+          "column_name": "UnitTypeName",
+          "data_type": "varchar",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "UnitType",
+          "table_name": "UnitType",
+          "max_length": 255
+        },
+        "dependsOn": [
+          "Datastore.table.UnitType"
+        ]
+      },
+      {
+        "type": "column",
+        "name": "UnitType-CityDistState",
+        "properties": {
+          "column_name": "CityDistState",
+          "data_type": "varchar",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "UnitType",
+          "table_name": "UnitType",
+          "max_length": 255
+        },
+        "dependsOn": [
+          "Datastore.table.UnitType"
+        ]
+      },
+      {
+        "type": "column",
+        "name": "UnitType-Hierarchy",
+        "properties": {
+          "column_name": "Hierarchy",
+          "data_type": "int",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "UnitType",
+          "table_name": "UnitType"
+        },
+        "dependsOn": [
+          "Datastore.table.UnitType"
+        ]
+      },
+      {
+        "type": "column",
+        "name": "UnitType-Active",
+        "properties": {
+          "column_name": "Active",
+          "data_type": "boolean",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "UnitType",
+          "table_name": "UnitType"
+        },
+        "dependsOn": [
+          "Datastore.table.UnitType"
+        ]
+      },
+      {
+        "type": "table",
+        "name": "Rank",
+        "properties": {
+          "table_name": "Rank"
+        },
+        "dependsOn": []
+      },
+      {
+        "type": "column",
+        "name": "Rank-RankID",
+        "properties": {
+          "column_name": "RankID",
+          "data_type": "int",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "Rank",
+          "table_name": "Rank"
+        },
+        "dependsOn": [
+          "Datastore.table.Rank"
+        ]
+      },
+      {
+        "type": "column",
+        "name": "Rank-RankName",
+        "properties": {
+          "column_name": "RankName",
+          "data_type": "varchar",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "Rank",
+          "table_name": "Rank",
+          "max_length": 255
+        },
+        "dependsOn": [
+          "Datastore.table.Rank"
+        ]
+      },
+      {
+        "type": "column",
+        "name": "Rank-Hierarchy",
+        "properties": {
+          "column_name": "Hierarchy",
+          "data_type": "int",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "Rank",
+          "table_name": "Rank"
+        },
+        "dependsOn": [
+          "Datastore.table.Rank"
+        ]
+      },
+      {
+        "type": "column",
+        "name": "Rank-Active",
+        "properties": {
+          "column_name": "Active",
+          "data_type": "boolean",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "Rank",
+          "table_name": "Rank"
+        },
+        "dependsOn": [
+          "Datastore.table.Rank"
+        ]
+      },
+      {
+        "type": "table",
+        "name": "Designation",
+        "properties": {
+          "table_name": "Designation"
+        },
+        "dependsOn": []
+      },
+      {
+        "type": "column",
+        "name": "Designation-DesignationID",
+        "properties": {
+          "column_name": "DesignationID",
+          "data_type": "int",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "Designation",
+          "table_name": "Designation"
+        },
+        "dependsOn": [
+          "Datastore.table.Designation"
+        ]
+      },
+      {
+        "type": "column",
+        "name": "Designation-DesignationName",
+        "properties": {
+          "column_name": "DesignationName",
+          "data_type": "varchar",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "Designation",
+          "table_name": "Designation",
+          "max_length": 255
+        },
+        "dependsOn": [
+          "Datastore.table.Designation"
+        ]
+      },
+      {
+        "type": "column",
+        "name": "Designation-Active",
+        "properties": {
+          "column_name": "Active",
+          "data_type": "boolean",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "Designation",
+          "table_name": "Designation"
+        },
+        "dependsOn": [
+          "Datastore.table.Designation"
+        ]
+      },
+      {
+        "type": "column",
+        "name": "Designation-SortOrder",
+        "properties": {
+          "column_name": "SortOrder",
+          "data_type": "int",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "Designation",
+          "table_name": "Designation"
+        },
+        "dependsOn": [
+          "Datastore.table.Designation"
+        ]
+      },
+      {
+        "type": "table",
+        "name": "Employee",
+        "properties": {
+          "table_name": "Employee"
+        },
+        "dependsOn": []
+      },
+      {
+        "type": "column",
+        "name": "Employee-EmployeeID",
+        "properties": {
+          "column_name": "EmployeeID",
+          "data_type": "bigint",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "Employee",
+          "table_name": "Employee"
+        },
+        "dependsOn": [
+          "Datastore.table.Employee"
+        ]
+      },
+      {
+        "type": "column",
+        "name": "Employee-DistrictID",
+        "properties": {
+          "column_name": "DistrictID",
+          "data_type": "int",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "Employee",
+          "table_name": "Employee"
+        },
+        "dependsOn": [
+          "Datastore.table.Employee"
+        ]
+      },
+      {
+        "type": "column",
+        "name": "Employee-UnitID",
+        "properties": {
+          "column_name": "UnitID",
+          "data_type": "bigint",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "Employee",
+          "table_name": "Employee"
+        },
+        "dependsOn": [
+          "Datastore.table.Employee"
+        ]
+      },
+      {
+        "type": "column",
+        "name": "Employee-RankID",
+        "properties": {
+          "column_name": "RankID",
+          "data_type": "int",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "Employee",
+          "table_name": "Employee"
+        },
+        "dependsOn": [
+          "Datastore.table.Employee"
+        ]
+      },
+      {
+        "type": "column",
+        "name": "Employee-DesignationID",
+        "properties": {
+          "column_name": "DesignationID",
+          "data_type": "int",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "Employee",
+          "table_name": "Employee"
+        },
+        "dependsOn": [
+          "Datastore.table.Employee"
+        ]
+      },
+      {
+        "type": "column",
+        "name": "Employee-KGID",
+        "properties": {
+          "column_name": "KGID",
+          "data_type": "varchar",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "Employee",
+          "table_name": "Employee",
+          "max_length": 255
+        },
+        "dependsOn": [
+          "Datastore.table.Employee"
+        ]
+      },
+      {
+        "type": "column",
+        "name": "Employee-FirstName",
+        "properties": {
+          "column_name": "FirstName",
+          "data_type": "varchar",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "Employee",
+          "table_name": "Employee",
+          "max_length": 255
+        },
+        "dependsOn": [
+          "Datastore.table.Employee"
+        ]
+      },
+      {
+        "type": "column",
+        "name": "Employee-EmployeeDOB",
+        "properties": {
+          "column_name": "EmployeeDOB",
+          "data_type": "date",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "Employee",
+          "table_name": "Employee"
+        },
+        "dependsOn": [
+          "Datastore.table.Employee"
+        ]
+      },
+      {
+        "type": "column",
+        "name": "Employee-GenderID",
+        "properties": {
+          "column_name": "GenderID",
+          "data_type": "int",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "Employee",
+          "table_name": "Employee"
+        },
+        "dependsOn": [
+          "Datastore.table.Employee"
+        ]
+      },
+      {
+        "type": "column",
+        "name": "Employee-BloodGroupID",
+        "properties": {
+          "column_name": "BloodGroupID",
+          "data_type": "int",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "Employee",
+          "table_name": "Employee"
+        },
+        "dependsOn": [
+          "Datastore.table.Employee"
+        ]
+      },
+      {
+        "type": "column",
+        "name": "Employee-PhysicallyChallenged",
+        "properties": {
+          "column_name": "PhysicallyChallenged",
+          "data_type": "boolean",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "Employee",
+          "table_name": "Employee"
+        },
+        "dependsOn": [
+          "Datastore.table.Employee"
+        ]
+      },
+      {
+        "type": "column",
+        "name": "Employee-AppointmentDate",
+        "properties": {
+          "column_name": "AppointmentDate",
+          "data_type": "date",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "Employee",
+          "table_name": "Employee"
+        },
+        "dependsOn": [
+          "Datastore.table.Employee"
+        ]
+      },
+      {
+        "type": "table",
+        "name": "CaseCategory",
+        "properties": {
+          "table_name": "CaseCategory"
+        },
+        "dependsOn": []
+      },
+      {
+        "type": "column",
+        "name": "CaseCategory-CaseCategoryID",
+        "properties": {
+          "column_name": "CaseCategoryID",
+          "data_type": "int",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "CaseCategory",
+          "table_name": "CaseCategory"
+        },
+        "dependsOn": [
+          "Datastore.table.CaseCategory"
+        ]
+      },
+      {
+        "type": "column",
+        "name": "CaseCategory-LookupValue",
+        "properties": {
+          "column_name": "LookupValue",
+          "data_type": "varchar",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "CaseCategory",
+          "table_name": "CaseCategory",
+          "max_length": 255
+        },
+        "dependsOn": [
+          "Datastore.table.CaseCategory"
+        ]
+      },
+      {
+        "type": "table",
+        "name": "GravityOffence",
+        "properties": {
+          "table_name": "GravityOffence"
+        },
+        "dependsOn": []
+      },
+      {
+        "type": "column",
+        "name": "GravityOffence-GravityOffenceID",
+        "properties": {
+          "column_name": "GravityOffenceID",
+          "data_type": "int",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "GravityOffence",
+          "table_name": "GravityOffence"
+        },
+        "dependsOn": [
+          "Datastore.table.GravityOffence"
+        ]
+      },
+      {
+        "type": "column",
+        "name": "GravityOffence-LookupValue",
+        "properties": {
+          "column_name": "LookupValue",
+          "data_type": "varchar",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "GravityOffence",
+          "table_name": "GravityOffence",
+          "max_length": 255
+        },
+        "dependsOn": [
+          "Datastore.table.GravityOffence"
+        ]
+      },
+      {
+        "type": "table",
+        "name": "ChargesheetDetails",
+        "properties": {
+          "table_name": "ChargesheetDetails"
+        },
+        "dependsOn": []
+      },
+      {
+        "type": "column",
+        "name": "ChargesheetDetails-CSID",
+        "properties": {
+          "column_name": "CSID",
+          "data_type": "bigint",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "ChargesheetDetails",
+          "table_name": "ChargesheetDetails"
+        },
+        "dependsOn": [
+          "Datastore.table.ChargesheetDetails"
+        ]
+      },
+      {
+        "type": "column",
+        "name": "ChargesheetDetails-CaseMasterID",
+        "properties": {
+          "column_name": "CaseMasterID",
+          "data_type": "bigint",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "ChargesheetDetails",
+          "table_name": "ChargesheetDetails"
+        },
+        "dependsOn": [
+          "Datastore.table.ChargesheetDetails"
+        ]
+      },
+      {
+        "type": "column",
+        "name": "ChargesheetDetails-csdate",
+        "properties": {
+          "column_name": "csdate",
+          "data_type": "datetime",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "ChargesheetDetails",
+          "table_name": "ChargesheetDetails"
+        },
+        "dependsOn": [
+          "Datastore.table.ChargesheetDetails"
+        ]
+      },
+      {
+        "type": "column",
+        "name": "ChargesheetDetails-cstype",
+        "properties": {
+          "column_name": "cstype",
+          "data_type": "varchar",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "ChargesheetDetails",
+          "table_name": "ChargesheetDetails",
+          "max_length": 255
+        },
+        "dependsOn": [
+          "Datastore.table.ChargesheetDetails"
+        ]
+      },
+      {
+        "type": "column",
+        "name": "ChargesheetDetails-PolicePersonID",
+        "properties": {
+          "column_name": "PolicePersonID",
+          "data_type": "bigint",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "ChargesheetDetails",
+          "table_name": "ChargesheetDetails"
+        },
+        "dependsOn": [
+          "Datastore.table.ChargesheetDetails"
+        ]
+      },
+      {
+        "type": "table",
+        "name": "Inv_OccuranceTime",
+        "properties": {
+          "table_name": "Inv_OccuranceTime"
+        },
+        "dependsOn": []
+      },
+      {
+        "type": "column",
+        "name": "Inv_OccuranceTime-CaseMasterID",
+        "properties": {
+          "column_name": "CaseMasterID",
+          "data_type": "bigint",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "Inv_OccuranceTime",
+          "table_name": "Inv_OccuranceTime"
+        },
+        "dependsOn": [
+          "Datastore.table.Inv_OccuranceTime"
+        ]
+      },
+      {
+        "type": "column",
+        "name": "Inv_OccuranceTime-OccuranceFromDateTime",
+        "properties": {
+          "column_name": "OccuranceFromDateTime",
+          "data_type": "datetime",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "Inv_OccuranceTime",
+          "table_name": "Inv_OccuranceTime"
+        },
+        "dependsOn": [
+          "Datastore.table.Inv_OccuranceTime"
+        ]
+      },
+      {
+        "type": "column",
+        "name": "Inv_OccuranceTime-OccuranceToDateTime",
+        "properties": {
+          "column_name": "OccuranceToDateTime",
+          "data_type": "datetime",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "Inv_OccuranceTime",
+          "table_name": "Inv_OccuranceTime"
+        },
+        "dependsOn": [
+          "Datastore.table.Inv_OccuranceTime"
+        ]
+      },
+      {
+        "type": "column",
+        "name": "Inv_OccuranceTime-DayOfWeek",
+        "properties": {
+          "column_name": "DayOfWeek",
+          "data_type": "varchar",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "Inv_OccuranceTime",
+          "table_name": "Inv_OccuranceTime",
+          "max_length": 255
+        },
+        "dependsOn": [
+          "Datastore.table.Inv_OccuranceTime"
+        ]
+      },
+      {
+        "type": "column",
+        "name": "Inv_OccuranceTime-TimeSlot",
+        "properties": {
+          "column_name": "TimeSlot",
+          "data_type": "varchar",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "Inv_OccuranceTime",
+          "table_name": "Inv_OccuranceTime",
+          "max_length": 255
+        },
+        "dependsOn": [
+          "Datastore.table.Inv_OccuranceTime"
+        ]
+      },
+      {
+        "type": "column",
+        "name": "Inv_OccuranceTime-PlaceOfOccurance",
+        "properties": {
+          "column_name": "PlaceOfOccurance",
+          "data_type": "varchar",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "Inv_OccuranceTime",
+          "table_name": "Inv_OccuranceTime",
+          "max_length": 255
+        },
+        "dependsOn": [
+          "Datastore.table.Inv_OccuranceTime"
+        ]
+      },
+      {
+        "type": "table",
+        "name": "inv_arrestsurrenderaccused",
+        "properties": {
+          "table_name": "inv_arrestsurrenderaccused"
+        },
+        "dependsOn": []
+      },
+      {
+        "type": "column",
+        "name": "inv_arrestsurrenderaccused-ArrestSurrenderID",
+        "properties": {
+          "column_name": "ArrestSurrenderID",
+          "data_type": "bigint",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "inv_arrestsurrenderaccused",
+          "table_name": "inv_arrestsurrenderaccused"
+        },
+        "dependsOn": [
+          "Datastore.table.inv_arrestsurrenderaccused"
+        ]
+      },
+      {
+        "type": "column",
+        "name": "inv_arrestsurrenderaccused-AccusedMasterID",
+        "properties": {
+          "column_name": "AccusedMasterID",
+          "data_type": "bigint",
+          "is_unique": false,
+          "is_mandatory": false,
+          "search_index_enabled": false,
+          "table_id": "inv_arrestsurrenderaccused",
+          "table_name": "inv_arrestsurrenderaccused"
+        },
+        "dependsOn": [
+          "Datastore.table.inv_arrestsurrenderaccused"
+        ]
+      }
+    ]
+  }
+}

@@ -3,7 +3,9 @@
     "name": "api",
     "stack": "node24",
     "type": "advancedio",
-    "env_variables": {}
+    "env_variables": {
+      "SEED_TOKEN": ""
+    }
   },
   "execution": {
     "main": "index.js"
