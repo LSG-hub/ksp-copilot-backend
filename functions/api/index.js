@@ -12,6 +12,7 @@
  */
 const express = require('express');
 const catalyst = require('zcatalyst-sdk-node');
+const { runAgent } = require('./lib/agent');
 
 const app = express();
 app.use(express.json({ limit: '8mb' }));
@@ -92,15 +93,17 @@ app.post('/admin/zcql', async (req, res) => {
   }
 });
 
-// --- Placeholder for the NL -> grounded-query agent (built next) ------------
-app.post('/query', (req, res) => {
+// --- NL -> grounded-query agent (GLM tool-loop over the FIR Data Store) ------
+app.post('/query', async (req, res) => {
   const { question } = req.body || {};
   if (!question) return res.status(400).json({ error: 'Missing "question" in request body.' });
-  res.status(200).json({
-    question,
-    answer: 'Query agent not yet implemented — data loading in progress; NL->ZCQL agent is next.',
-    grounded: false, executed_query: null, source_fir_ids: [],
-  });
+  try {
+    const capp = catalyst.initialize(req);
+    const out = await runAgent(capp, question);
+    res.status(200).json(Object.assign({ question }, out));
+  } catch (err) {
+    res.status(500).json({ question, error: String((err && err.message) || err) });
+  }
 });
 
 module.exports = app;
