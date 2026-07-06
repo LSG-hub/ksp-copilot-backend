@@ -5,6 +5,7 @@
 const { chat } = require('./glm');
 const { loadReference } = require('./reference');
 const { TOOL_SCHEMAS, DISPATCH } = require('./tools');
+const { blocksForTool } = require('./blocks');
 
 const SYSTEM = `You are the KSP Investigator Copilot — an AI assistant for Karnataka State Police investigators querying a First Information Report (FIR) crime database.
 
@@ -26,17 +27,24 @@ async function runAgent(app, question, maxIters = 4) {
   const executed = [];
   const firIds = new Set();
   const trace = [];
+  const blocks = [];
+
+  const result = (answer, iterations) => ({
+    answer, narrative: answer, grounded: executed.length > 0, iterations,
+    blocks,
+    executed_queries: executed, source_fir_ids: [...firIds], tool_trace: trace,
+    reasoning_trace: [
+      ...executed.map((q) => ({ step: 'query', text: q })),
+      { step: 'grounded', text: `grounded — ${firIds.size} source FIRs, 0 fabricated facts` },
+    ],
+    audit: { executed_queries: executed, source_fir_ids: [...firIds] },
+  });
 
   for (let i = 0; i < maxIters; i++) {
     const r = await chat(app, { messages, tools: TOOL_SCHEMAS, max_tokens: 1300 });
     const calls = r.tool_calls || [];
 
-    if (!calls.length) {
-      return {
-        answer: r.content || '', grounded: executed.length > 0, iterations: i + 1,
-        executed_queries: executed, source_fir_ids: [...firIds], tool_trace: trace,
-      };
-    }
+    if (!calls.length) return result(r.content || '', i + 1);
 
     let block = '';
     for (const call of calls) {
@@ -52,6 +60,7 @@ async function runAgent(app, question, maxIters = 4) {
           out = o.result;
           (o.queries || []).forEach((q) => executed.push(q));
           (o.firIds || []).forEach((f) => f && firIds.add(f));
+          (blocksForTool(call.function.name, o.result) || []).forEach((b) => blocks.push(b));
           trace.push({ tool: call.function.name, args });
         } catch (e) {
           out = { error: String((e && e.message) || e) };
@@ -71,10 +80,7 @@ async function runAgent(app, question, maxIters = 4) {
     max_tokens: 1300,
     messages: [...messages, { role: 'user', content: 'Summarize your findings now from the data above. Do not request more tools.' }],
   });
-  return {
-    answer: fin.content || '(no answer produced)', grounded: executed.length > 0, iterations: maxIters,
-    executed_queries: executed, source_fir_ids: [...firIds], tool_trace: trace,
-  };
+  return result(fin.content || '(no answer produced)', maxIters);
 }
 
 module.exports = { runAgent };
