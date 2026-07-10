@@ -13,6 +13,9 @@
 const express = require('express');
 const catalyst = require('zcatalyst-sdk-node');
 const { runAgent } = require('./lib/agent');
+const { loadReference } = require('./lib/reference');
+const { DISPATCH } = require('./lib/tools');
+const { blocksForTool } = require('./lib/blocks');
 
 const app = express();
 app.use(express.json({ limit: '8mb' }));
@@ -90,6 +93,26 @@ app.post('/admin/zcql', async (req, res) => {
     res.status(200).json({ query, count: rows.length, rows });
   } catch (err) {
     res.status(500).json({ query, error: String((err && err.message) || err) });
+  }
+});
+
+// --- Fast case lookup (no LLM) — opens a full FIR dossier by CrimeNo ---------
+app.post('/case', async (req, res) => {
+  const { crime_no } = req.body || {};
+  if (!crime_no) return res.status(400).json({ error: 'Missing "crime_no" in request body.' });
+  try {
+    const capp = catalyst.initialize(req);
+    const ref = await loadReference(capp);
+    const o = await DISPATCH.case_details(capp, ref, { crime_no });
+    const blocks = blocksForTool('case_details', o.result);
+    res.status(200).json({
+      crime_no,
+      found: !(o.result && o.result.found === false),
+      block: blocks[0] || null,
+      executed_queries: o.queries || [],
+    });
+  } catch (err) {
+    res.status(500).json({ crime_no, error: String((err && err.message) || err) });
   }
 });
 
